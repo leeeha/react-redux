@@ -1,26 +1,14 @@
 import React, {Component} from 'react';
-import store from '../store'; 
 
+// Presentational ì»´í¬ë„ŒíŠ¸ 
+// ë¦¬ë•ìŠ¤ì— ì¢…ì†ë˜ì§€ ì•Šê³ , ë‹¤ë¥¸ ê³³ì—ì„œ ë¶€í’ˆìœ¼ë¡œ ì¬ì‚¬ìš© í•  ìˆ˜ ìˆëŠ” ì»´í¬ë„ŒíŠ¸ 
 export default class DisplayNumber extends Component{
-  state = {
-    number: store.getState().number
-  }
-
-  // storeÀÇ µ¥ÀÌÅÍ °ªÀÌ ¹Ù²ğ ¶§¸¶´Ù subscribe°¡ È£ÃâµÇ¾î UI °»½Å  
-  constructor(props){
-    super(props);
-    store.subscribe(function(){
-      this.setState({number: store.getState().number});
-    }.bind(this));
-  }
-  
   render(){
     return (
       <div>
         <h1>Display Number</h1>
-        <input type="text" value={this.state.number} readOnly></input>
+        <input type="text" value={this.props.number} readOnly></input>
       </div>
     )
   }
 }
-
