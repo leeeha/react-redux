@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AddNumber from "../containers/AddNumber"; // Container·Î ¹Ù²ãÄ¡±â 
+import AddNumber from "../containers/AddNumber"; 
 
 export default class AddNumberRoot extends Component{
     render(){

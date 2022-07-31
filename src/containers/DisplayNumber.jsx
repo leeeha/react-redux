@@ -1,9 +1,14 @@
+import DisplayNumber from '../components/DisplayNumber';
+import {connect} from 'react-redux';
+
+// connect는 DisplayNumber 컴포넌트를 래핑한 컴포넌트를 리턴함.  
+export default connect()(DisplayNumber);
+
+/*
 import React, {Component} from "react";
 import store from '../store'; 
-import DisplayNumber from '../components/DisplayNumber';
 
-// Container 컴포넌트 
-// 리덕스의 store와 관련된 작업을 모두 처리하는 컴포넌트 
+// Container 컴포넌트
 export default class extends Component{
     state = {
         number: store.getState().number
@@ -21,3 +26,4 @@ export default class extends Component{
         return <DisplayNumber number={this.state.number} unit={this.props.unit}></DisplayNumber>
     }
 }
+*/
