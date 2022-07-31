@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux'; // AppÀÇ »óÀ§ ÄÄÆ÷³ÍÆ® 
-import store from './store' // ¸®´ö½ºÀÇ store 
+import {Provider} from 'react-redux'; // Appì˜ ìƒìœ„ ì»´í¬ë„ŒíŠ¸ 
+import store from './store' // ë¦¬ë•ìŠ¤ì˜ store 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

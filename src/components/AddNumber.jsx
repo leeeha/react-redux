@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-// Presentational ÄÄÆ÷³ÍÆ® 
+// Presentational ì»´í¬ë„ŒíŠ¸ 
 export default class AddNumber extends Component{
   state = {size: 1} 
   render(){
