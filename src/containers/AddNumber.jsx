@@ -1,13 +1,22 @@
 import AddNumber from "../components/AddNumber"; 
 import {connect} from 'react-redux';
 
-export default connect()(AddNumber); 
+// AddNumber ????? ??? ????
+// store? dispatch ??? aciton ??? ???. 
+function mapDispatchToProps(dispatch){
+    return {
+        onClick:function(_size){
+            dispatch({type: 'INCREMENT', size: _size});
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddNumber); 
 
 /*
 import React, {Component} from "react";
 import store from '../store'; 
 
-// Container ÄÄÆ÷³ÍÆ®
 export default class extends Component{
     render(){
         return <AddNumber onClick={function(_size){

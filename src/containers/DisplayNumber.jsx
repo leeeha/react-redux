@@ -1,14 +1,21 @@
 import DisplayNumber from '../components/DisplayNumber';
 import {connect} from 'react-redux';
 
+// 리덕스 store에 저장된 state가 바뀌면 
+// DisplayNumber의 props로 그 변경사항을 전달함.
+function mapReduxStateToReactProps(state){
+    return{
+        number:state.number
+    }
+}
+
 // connect는 DisplayNumber 컴포넌트를 래핑한 컴포넌트를 리턴함.  
-export default connect()(DisplayNumber);
+export default connect(mapReduxStateToReactProps)(DisplayNumber);
 
 /*
 import React, {Component} from "react";
 import store from '../store'; 
 
-// Container 컴포넌트
 export default class extends Component{
     state = {
         number: store.getState().number
